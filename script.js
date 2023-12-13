@@ -27,6 +27,7 @@ function drawBoard() {
     }
 }
 
+// Cell Clicked Function
 function cellClicked(e) { 
     const cell = e.target; 
     const index = [...cell.parentNode.children].indexOf(cell); 
@@ -41,10 +42,12 @@ function cellClicked(e) {
     }
 }
 
+// Switch Player
 function switchPlayer() { 
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; 
 }
 
+// Check Winner Function 
 function checkForWinner() { 
     for (let combo of winningCombos) { 
         const [a, b, c] = combo; 
@@ -66,6 +69,7 @@ function checkForWinner() {
     }
 }
 
+// Reset Board
 function resetBoard() { 
     spaces.fill(null); 
 
